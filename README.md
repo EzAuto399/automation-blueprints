@@ -8,8 +8,8 @@ No tech knowledge needed to follow along. Everything here is written in plain En
 
 | Ep | Business | Workflow | Watch | Blueprint |
 |----|----------|----------|-------|-----------|
-| 01 | Property management | Every renter enquiry answered, listings posted on schedule, inspections booked without double-ups | [video](https://www.loom.com/share/644d8bee2ead449c926b7745c3ebf478) | [01-property-management](01-property-management/) |
-| 02 | Migration & education agency | 5 daily loops so no student inquiry goes unanswered | [video](https://www.loom.com/share/530de97565ba442c975bce3b07adfcf8) | [02-student-inquiries](02-student-inquiries/) |
+| 01 | Property management | Every renter enquiry answered, listings posted on schedule, inspections booked without double-ups | [video](https://youtu.be/qyCbVxHVz5U) | [01-property-management](01-property-management/) |
+| 02 | Migration & education agency | 5 daily loops so no student inquiry goes unanswered | [video](https://youtu.be/1_yfdX1q_dg) | [02-student-inquiries](02-student-inquiries/) |
 
 ## The pattern (same every episode)
 

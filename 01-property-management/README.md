@@ -1,6 +1,6 @@
 # Ep 01 — Property Management: every renter answered
 
-**Watch:** [Automating Property Management With AI Agents](https://www.loom.com/share/644d8bee2ead449c926b7745c3ebf478) (4 min)
+**Watch:** [Automating Property Management With AI Agents](https://youtu.be/qyCbVxHVz5U) (4 min)
 
 A working system that handles the daily grind of leasing: posting listings, answering renter messages, booking inspections, and sending applications — with a human approving the replies.
 
