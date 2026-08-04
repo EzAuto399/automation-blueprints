@@ -9,7 +9,7 @@ No tech knowledge needed to follow along. Everything here is written in plain En
 | Ep | Business | Workflow | Watch | Blueprint |
 |----|----------|----------|-------|-----------|
 | 01 | Property management | Every renter enquiry answered, listings posted on schedule, inspections booked without double-ups | [video](https://youtu.be/qyCbVxHVz5U) | [01-property-management](01-property-management/) |
-| 02 | Migration & education agency | 5 daily loops so no student inquiry goes unanswered | [video](https://youtu.be/1_yfdX1q_dg) | [02-student-inquiries](02-student-inquiries/) |
+| 02 | Migration & education agency | 5 daily loops so no student inquiry goes unanswered | [video](https://youtu.be/vVIEXOA-E3Q) | [02-student-inquiries](02-student-inquiries/) |
 
 ## The pattern (same every episode)
 

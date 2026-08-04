@@ -1,6 +1,6 @@
 # Ep 02 — Migration & Education Agency: 5 loops so no student goes unanswered
 
-**Watch:** [Automating Student Inquiries With AI Workflows](https://youtu.be/1_yfdX1q_dg) (13 min)
+**Watch:** [Automating Student Inquiries With AI Workflows](https://youtu.be/vVIEXOA-E3Q) (13 min)
 
 **This is the plan I gave the agency** — an advisory walkthrough, not a deployed build. The numbers below are my estimates from the video, explained there.
 
