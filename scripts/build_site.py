@@ -241,9 +241,11 @@ def sidebar_for(current):
             out.append(f'<a href="{pfx}{slug}" class="{on}">{t}</a>')
         out.append('</details>')
     # niches without workflows (01/02) -> plain links
+    short_names = {'01-property-management': 'Property management',
+                   '02-student-inquiries': 'Migration & education agency'}
     for niche_slug in ['01-property-management', '02-student-inquiries']:
         idx_slug = f'{niche_slug}/index.html'
-        nicetitle = next((t for s, l, t, _ in pages if s == idx_slug), niche_slug)
+        nicetitle = short_names.get(niche_slug, niche_slug)
         on = 'on' if current == idx_slug else ''
         out.append(f'<a href="{pfx}{idx_slug}" class="home {"on" if on else ""}">{nicetitle}</a>')
     return '\n'.join(out)
