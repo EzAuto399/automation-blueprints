@@ -60,7 +60,7 @@ html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"S
 .content hr{border:0;border-top:1px solid var(--w12);margin:2rem 0}
 /* loop map */
 .mermaid-holder{margin:1.2rem 0;background:var(--raised);border:1px solid var(--line);border-radius:16px;padding:1.2rem;overflow:auto}
-.mermaid-holder svg{width:100%!important;height:auto;max-width:100%}
+.mermaid-holder svg{width:100%!important;height:auto!important;max-width:100%!important}
 /* callouts */
 .reply{background:var(--paper);color:var(--ink);border-radius:16px;padding:1rem 1.2rem;margin:1.1rem 0;position:relative;max-width:52ch;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .reply::before{content:"";position:absolute;left:22px;bottom:-9px;width:18px;height:18px;background:var(--paper);border-radius:3px;transform:rotate(45deg)}
@@ -187,6 +187,8 @@ document.addEventListener('DOMContentLoaded',function(){
     var id='mmd'+Math.random().toString(36).slice(2,9);
     mermaid.render(id,(el.textContent||'').trim()).then(function(r){
       var h=document.createElement('div');h.className='mermaid-holder';h.innerHTML=r.svg;
+      var svg=h.querySelector('svg');
+      if(svg){svg.setAttribute('width','100%');svg.removeAttribute('height');svg.style.maxWidth='100%';svg.style.width='100%';svg.style.height='auto';}
       el.closest('pre').replaceWith(h);
     }).catch(function(e){console.warn('mermaid fail',e);});
   });
