@@ -1,0 +1,13 @@
+---
+remote_theme: just-the-docs
+title: Automating Real Businesses
+description: Free, plain-English AI workflow blueprints for small businesses — one business, one workflow map, per episode.
+url: https://ezauto399.github.io
+baseurl: /automation-blueprints
+search_enabled: true
+aux_links:
+  "YouTube @yodalaihq":
+    - "https://www.youtube.com/@yodalaihq"
+  "yodalai.xyz":
+    - "https://yodalai.xyz"
+color_scheme: light

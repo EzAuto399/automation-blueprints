@@ -1,0 +1,34 @@
+---
+title: Review requester
+parent: Tradie
+nav_order: 4
+---
+
+# Review requester
+
+## What it does
+
+Two hours after the job, while the customer is still happy, the AI sends a short message with the Google review link. Reviews arrive while the work is fresh — not a week later when you remember.
+
+## The loop
+
+```mermaid
+flowchart LR
+  A[Job marked done] --> B[2h later: review link sent]
+  B --> C[Review posted]
+  C --> D[Thank-you reply sent]
+  D --> E[Repeat customers get a service reminder]
+```
+
+## What a human still does
+
+- Chooses the review platform (Google, word of mouth)
+- Decides whether to ask after tricky jobs
+
+## What it runs on
+
+Same agent. The review request is a message, not an app — it works on SMS and Messenger.
+
+---
+
+*Want this for your business? Free 15-min build review: [yodalai.xyz](https://yodalai.xyz)*
