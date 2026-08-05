@@ -11,4 +11,6 @@ aux_links:
   "yodalai.xyz":
     - "https://yodalai.xyz"
 color_scheme: light
+plugins:
+  - jekyll-remote-theme
 
