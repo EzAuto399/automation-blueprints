@@ -193,6 +193,9 @@ pages = []  # (slug, label, title, body_md)
 def add_page(slug, label, text):
     fm, body = title_from_frontmatter(text)
     t = (fm or {}).get('title', label)
+    if t == label and body.startswith('#'):
+        t = body.split('\n', 1)[0].lstrip('# ').strip()
+        t = re.sub(r'^Ep \d+ — ', '', t)
     pages.append((slug, label, t, body))
 
 add_page('index.html', 'Home', (ROOT / 'index.md').read_text())
@@ -222,10 +225,6 @@ def sidebar_for(current):
     pfx = prefix_for(current)
     out = [f'<a class="home {"on" if current == "index.html" else ""}" href="{pfx}index.html">Home</a>']
     groups = {}
-    for slug, label, title, _ in pages[2:]:
-        if '/workflows/' in slug:
-            niche_slug, _, wf = slug.split('/')
-            groups.setdefault(niche_slug, []).append((slug, wf))
     # all niches in series order; details-group when they have workflows
     for slug, label, title, _ in pages[2:]:
         if '/workflows/' in slug:
