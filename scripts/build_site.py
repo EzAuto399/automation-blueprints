@@ -65,8 +65,8 @@ pre code{{background:none;border:0;padding:0;color:var(--w72)}}
 <div class="bar">
   <span class="brand">Automating Real Businesses · by Yo-Da Lai</span>
   <div class="nav">
-    <a href="../">Home</a>
-    <a href="../pattern.html">The pattern</a>
+    <a href="{pfx}index.html">Home</a>
+    <a href="{pfx}pattern.html">The pattern</a>
     <a href="https://www.youtube.com/@yodalaihq" target="_blank">YouTube</a>
     <a href="https://yodalai.xyz" target="_blank">yodalai.xyz</a>
   </div>
@@ -100,9 +100,14 @@ document.addEventListener('DOMContentLoaded',function(){{
 
 
 def md_to_html(md_text):
-    """Convert markdown; mermaid code fences stay as <pre><code class=language-mermaid>."""
+    """Convert markdown; then rewrite relative links to static targets."""
     MD.reset()
-    return MD.convert(md_text)
+    html = MD.convert(md_text)
+    # link.md -> link.html ; bare path without ext -> path.html if it looks like a page ref
+    html = re.sub(r'href="([^"#]+?)\.md(#?[^"]*)"', r'href="\1.html\2"', html)
+    html = re.sub(r'href="(workflows/[^"#]+)(#?[^"]*)"', r'href="\1.html\2"', html)
+    html = re.sub(r'href="((?:0[0-9]-[^"#]+)/)(#?[^"]*)"', r'href="\1index.html\2"', html)
+    return html
 
 
 def title_from_frontmatter(text):
@@ -144,10 +149,16 @@ for niche in ['01-property-management', '02-student-inquiries', '03-tradie',
             add_page(rel, wf.stem, wf.read_text())
 
 # Build sidebar
+def prefix_for(slug):
+    depth = slug.count('/')
+    return '../' * depth if depth else ''
+
+
 def sidebar_for(current):
+    pfx = prefix_for(current)
     out = ['<a class="grp">Series</a>',
-           '<a href="../" class="' + ('on' if current == 'index.html' else '') + '">Home</a>',
-           '<a href="../pattern.html" class="' + ('on' if current == 'pattern.html' else '') + '">The pattern</a>']
+           f'<a href="{pfx}index.html" class="{"on" if current == "index.html" else ""}">Home</a>',
+           f'<a href="{pfx}pattern.html" class="{"on" if current == "pattern.html" else ""}">The pattern</a>']
     groups = {}
     for slug, label, title, _ in pages[2:]:
         if '/workflows/' in slug:
@@ -159,16 +170,16 @@ def sidebar_for(current):
         out.append(f'<a class="grp">{niche_slug.replace("-", " ").title()}</a>')
         idx_slug = f'{niche_slug}/index.html'
         nicetitle = next((t for s, l, t, _ in pages if s == idx_slug), niche_slug)
-        out.append(f'<a href="../{idx_slug}" class="{"on" if current == idx_slug else ""}">{nicetitle}</a>')
+        out.append(f'<a href="{pfx}{idx_slug}" class="{"on" if current == idx_slug else ""}">{nicetitle}</a>')
         for slug, wf in wfs:
             t = next((t for s, l, t, _ in pages if s == slug), wf)
             on = 'on' if current == slug else ''
-            out.append(f'<a href="../{slug}" class="{on}">· {t}</a>')
+            out.append(f'<a href="{pfx}{slug}" class="{on}">· {t}</a>')
     return '\n'.join(out)
 
 for slug, label, title, body in pages:
     html_body = md_to_html(body)
-    page = HEAD.format(title=title, sidebar=sidebar_for(slug), content=html_body)
+    page = HEAD.format(title=title, pfx=prefix_for(slug), sidebar=sidebar_for(slug), content=html_body)
     dest = OUT / slug
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(page)
