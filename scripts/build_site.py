@@ -226,6 +226,11 @@ def sidebar_for(current):
         if '/workflows/' in slug:
             niche_slug, _, wf = slug.split('/')
             groups.setdefault(niche_slug, []).append((slug, wf))
+    # all niches in series order; details-group when they have workflows
+    for slug, label, title, _ in pages[2:]:
+        if '/workflows/' in slug:
+            niche_slug, _, wf = slug.split('/')
+            groups.setdefault(niche_slug, []).append((slug, wf))
     for niche_slug, wfs in groups.items():
         idx_slug = f'{niche_slug}/index.html'
         nicetitle = next((t for s, l, t, _ in pages if s == idx_slug), niche_slug)
@@ -236,6 +241,12 @@ def sidebar_for(current):
             on = 'on' if current == slug else ''
             out.append(f'<a href="{pfx}{slug}" class="{on}">{t}</a>')
         out.append('</details>')
+    # niches without workflows (01/02) -> plain links
+    for niche_slug in ['01-property-management', '02-student-inquiries']:
+        idx_slug = f'{niche_slug}/index.html'
+        nicetitle = next((t for s, l, t, _ in pages if s == idx_slug), niche_slug)
+        on = 'on' if current == idx_slug else ''
+        out.append(f'<a href="{pfx}{idx_slug}" class="home {"on" if on else ""}">{nicetitle}</a>')
     return '\n'.join(out)
 
 
