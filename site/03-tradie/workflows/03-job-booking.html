@@ -20,7 +20,7 @@ html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"S
 .nav a{color:var(--w55);text-decoration:none;font-size:.8rem;font-weight:600;padding:.42rem .7rem;border-radius:999px;border:1px solid transparent}
 .nav a:hover{color:var(--tint);border-color:var(--w12)}
 .nav a.on{background:var(--coral);color:#0b0d12;border-color:var(--coral)}
-.grid{display:grid;grid-template-columns:1fr 3fr;gap:1.5rem;align-items:start}
+.grid{display:grid;grid-template-columns:250px 1fr;gap:1.5rem;align-items:start}
 .side{position:sticky;top:1rem;display:flex;flex-direction:column;gap:.15rem;font-size:.86rem}
 .side a{color:var(--w55);text-decoration:none;padding:.32rem .55rem;border-radius:8px}
 .side a:hover{color:var(--tint);background:var(--w06)}
@@ -38,8 +38,8 @@ html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"S
 .content li{margin:.3rem 0}
 .content blockquote{border-left:3px solid var(--coral);padding:.2rem 0 .2rem 1rem;color:var(--w55);margin:1rem 0}
 .content hr{border:0;border-top:1px solid var(--w12);margin:1.6rem 0}
-.mermaid-holder{margin:1.1rem 0;background:var(--raised);border:1px solid var(--w12);border-radius:14px;padding:.9rem;overflow:auto}
-.mermaid-holder svg{max-width:100%;height:auto}
+.mermaid-holder{margin:1.1rem 0;background:var(--raised);border:1px solid var(--w12);border-radius:14px;padding:1.1rem;overflow:auto}
+.mermaid-holder svg{width:100%!important;height:auto;max-width:100%}
 code{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:var(--w06);border:1px solid var(--w12);border-radius:6px;padding:.1rem .35rem;color:var(--tint)}
 pre{background:var(--raised);border:1px solid var(--w12);border-radius:12px;padding:.9rem 1rem;overflow:auto;margin:.8rem 0}
 pre code{background:none;border:0;padding:0;color:var(--w72)}
@@ -110,6 +110,15 @@ pre code{background:none;border:0;padding:0;color:var(--w72)}
   E --&gt;|Yes| F[Job done]
   E --&gt;|Change| G[Reschedule in one tap]
 </code></pre>
+<h2>How it runs, day to day</h2>
+<ol>
+<li>Accepted job → the AI checks your calendar and books the slot, so nothing double-ups.</li>
+<li>The customer gets a confirmation with the date and a time window.</li>
+<li>The day before, a reminder goes out with a one-tap 'I'm running late' or 'reschedule' path.</li>
+<li>On the day, the job shows up in your calendar with the customer's details attached.</li>
+</ol>
+<h2>What a reply looks like</h2>
+<p>"Booked in — Tuesday between 8 and 10. You'll get a reminder the day before. If anything changes, just tap the link and pick a new time."</p>
 <h2>What a human still does</h2>
 <ul>
 <li>Confirms the booking window</li>
@@ -130,7 +139,8 @@ pre code{background:none;border:0;padding:0;color:var(--w72)}
 <script>
 mermaid.initialize({startOnLoad:false,theme:'base',themeVariables:{
   primaryColor:'#fdf3ee',primaryBorderColor:'#f07545',primaryTextColor:'#111318',
-  lineColor:'#5b554c',fontFamily:'system-ui, sans-serif',fontSize:'15px'}});
+  lineColor:'#5b554c',fontFamily:'system-ui, sans-serif',fontSize:'19px'},
+  flowchart:{nodeSpacing:55,rankSpacing:75,curve:'basis'}});
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('pre code.language-mermaid').forEach(function(el){
     var id='mmd'+Math.random().toString(36).slice(2,9);

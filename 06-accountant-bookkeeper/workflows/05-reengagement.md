@@ -20,6 +20,17 @@ flowchart LR
   D --> E[Client replies → booked in]
 ```
 
+## How it runs, day to day
+
+1. Every client has a last-contact date and a known 'next moment' — EOFY, a new home, a new business.
+2. When the moment arrives, the AI drafts a personal nudge.
+3. You approve who gets it and when.
+4. Past clients come back before they drift to another firm.
+
+## What a reply looks like
+
+"It's been a year since we last filed together. Anything changed — new income, new business, new plans? Worth a quick catch-up."
+
 ## What a human still does
 
 - Approves who gets nudged and when

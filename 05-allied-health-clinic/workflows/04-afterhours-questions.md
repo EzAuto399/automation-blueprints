@@ -20,6 +20,17 @@ flowchart LR
   C -->|Yes| E[Queued for staff]
 ```
 
+## How it runs, day to day
+
+1. Questions arrive after hours: fees, bulk billing, what to bring, whether you treat X.
+2. The AI answers from the clinic's own policies — the same answers your team would give.
+3. Anything clinical, urgent or uncertain is queued for staff with full context.
+4. Patients get an answer at 9pm on a Sunday and feel looked after.
+
+## What a reply looks like
+
+"Yes, we're open Saturdays. A first consult is 45 minutes — bring any scans or referral letters you have. Would you like me to find a time?"
+
 ## What a human still does
 
 - Approves the clinic policy answers once

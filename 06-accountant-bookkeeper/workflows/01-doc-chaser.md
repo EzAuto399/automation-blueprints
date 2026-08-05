@@ -21,6 +21,17 @@ flowchart LR
   D --> F[Uploaded? Marked off]
 ```
 
+## How it runs, day to day
+
+1. Every client has a checklist: statements, invoices, receipts, logs.
+2. Each morning the AI scans what's still missing and chases exactly that — one client, one message, one missing item.
+3. Uploads are checked off automatically as they arrive.
+4. Clients who go quiet for a few days are flagged to you, not nagged into silence.
+
+## What a reply looks like
+
+"Just a nudge — still need your June bank statements for the BAS. Uploading them here takes two minutes and then you're done."
+
 ## What a human still does
 
 - Approves chase wording per client segment

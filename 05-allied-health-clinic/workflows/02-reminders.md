@@ -21,6 +21,17 @@ flowchart LR
   D -->|Can't make it| F[One-tap reschedule<br/>slot opens to waitlist]
 ```
 
+## How it runs, day to day
+
+1. Every booking gets a reminder at 48 hours and again at 24.
+2. Each reminder has a one-tap reschedule link — easier to move than to no-show.
+3. When someone cancels, the slot opens to the waitlist automatically.
+4. Your front desk stops being the reminder service.
+
+## What a reply looks like
+
+"Reminder: your appointment is tomorrow at 10am with Sarah. Can't make it? Reschedule in one tap — we'll open the slot for someone waiting."
+
 ## What a human still does
 
 - Approves the reminder tone and reschedule policy

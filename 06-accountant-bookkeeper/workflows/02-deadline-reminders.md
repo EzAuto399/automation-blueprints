@@ -21,6 +21,17 @@ flowchart LR
   E -->|Yes| F[Receipt + thank-you]
 ```
 
+## How it runs, day to day
+
+1. Every deadline goes on the firm calendar: BAS, tax, lodgements, the lot.
+2. Clients get a countdown: seven days out, three days out, last call the day before.
+3. Each reminder names the one thing still missing — specific beats generic.
+4. Filed on time = less stress for them, less chasing for you.
+
+## What a reply looks like
+
+"Your BAS is due in five days. We have everything except your fuel log — send it through and we'll take care of the rest."
+
 ## What a human still does
 
 - Approves the reminder schedule

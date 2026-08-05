@@ -22,6 +22,17 @@ flowchart LR
   E -->|Change| G[Reschedule in one tap]
 ```
 
+## How it runs, day to day
+
+1. Accepted job → the AI checks your calendar and books the slot, so nothing double-ups.
+2. The customer gets a confirmation with the date and a time window.
+3. The day before, a reminder goes out with a one-tap 'I'm running late' or 'reschedule' path.
+4. On the day, the job shows up in your calendar with the customer's details attached.
+
+## What a reply looks like
+
+"Booked in — Tuesday between 8 and 10. You'll get a reminder the day before. If anything changes, just tap the link and pick a new time."
+
 ## What a human still does
 
 - Confirms the booking window

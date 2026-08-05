@@ -19,6 +19,17 @@ flowchart LR
   C --> D[Quiet stay]
 ```
 
+## How it runs, day to day
+
+1. The moment a booking is confirmed, the check-in pack goes out automatically.
+2. It contains what guests actually message about at midnight: address, door code, wifi, house rules, what to do if something's wrong.
+3. On arrival day, a short reminder confirms everything's ready.
+4. You update the pack once when things change — the AI sends the current version every time.
+
+## What a reply looks like
+
+"Welcome! Your stay starts tomorrow. Door code: 4821 · Wifi: the-stay / gold-coast-01. House rules and local recommendations are in the pack. Enjoy!"
+
 ## What a human still does
 
 - Updates the pack when the code or wifi changes

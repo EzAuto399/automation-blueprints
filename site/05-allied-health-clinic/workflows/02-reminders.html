@@ -20,7 +20,7 @@ html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"S
 .nav a{color:var(--w55);text-decoration:none;font-size:.8rem;font-weight:600;padding:.42rem .7rem;border-radius:999px;border:1px solid transparent}
 .nav a:hover{color:var(--tint);border-color:var(--w12)}
 .nav a.on{background:var(--coral);color:#0b0d12;border-color:var(--coral)}
-.grid{display:grid;grid-template-columns:1fr 3fr;gap:1.5rem;align-items:start}
+.grid{display:grid;grid-template-columns:250px 1fr;gap:1.5rem;align-items:start}
 .side{position:sticky;top:1rem;display:flex;flex-direction:column;gap:.15rem;font-size:.86rem}
 .side a{color:var(--w55);text-decoration:none;padding:.32rem .55rem;border-radius:8px}
 .side a:hover{color:var(--tint);background:var(--w06)}
@@ -38,8 +38,8 @@ html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"S
 .content li{margin:.3rem 0}
 .content blockquote{border-left:3px solid var(--coral);padding:.2rem 0 .2rem 1rem;color:var(--w55);margin:1rem 0}
 .content hr{border:0;border-top:1px solid var(--w12);margin:1.6rem 0}
-.mermaid-holder{margin:1.1rem 0;background:var(--raised);border:1px solid var(--w12);border-radius:14px;padding:.9rem;overflow:auto}
-.mermaid-holder svg{max-width:100%;height:auto}
+.mermaid-holder{margin:1.1rem 0;background:var(--raised);border:1px solid var(--w12);border-radius:14px;padding:1.1rem;overflow:auto}
+.mermaid-holder svg{width:100%!important;height:auto;max-width:100%}
 code{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:var(--w06);border:1px solid var(--w12);border-radius:6px;padding:.1rem .35rem;color:var(--tint)}
 pre{background:var(--raised);border:1px solid var(--w12);border-radius:12px;padding:.9rem 1rem;overflow:auto;margin:.8rem 0}
 pre code{background:none;border:0;padding:0;color:var(--w72)}
@@ -109,6 +109,15 @@ pre code{background:none;border:0;padding:0;color:var(--w72)}
   D --&gt;|Yes| E[Show up]
   D --&gt;|Can't make it| F[One-tap reschedule&lt;br/&gt;slot opens to waitlist]
 </code></pre>
+<h2>How it runs, day to day</h2>
+<ol>
+<li>Every booking gets a reminder at 48 hours and again at 24.</li>
+<li>Each reminder has a one-tap reschedule link — easier to move than to no-show.</li>
+<li>When someone cancels, the slot opens to the waitlist automatically.</li>
+<li>Your front desk stops being the reminder service.</li>
+</ol>
+<h2>What a reply looks like</h2>
+<p>"Reminder: your appointment is tomorrow at 10am with Sarah. Can't make it? Reschedule in one tap — we'll open the slot for someone waiting."</p>
 <h2>What a human still does</h2>
 <ul>
 <li>Approves the reminder tone and reschedule policy</li>
@@ -127,7 +136,8 @@ pre code{background:none;border:0;padding:0;color:var(--w72)}
 <script>
 mermaid.initialize({startOnLoad:false,theme:'base',themeVariables:{
   primaryColor:'#fdf3ee',primaryBorderColor:'#f07545',primaryTextColor:'#111318',
-  lineColor:'#5b554c',fontFamily:'system-ui, sans-serif',fontSize:'15px'}});
+  lineColor:'#5b554c',fontFamily:'system-ui, sans-serif',fontSize:'19px'},
+  flowchart:{nodeSpacing:55,rankSpacing:75,curve:'basis'}});
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('pre code.language-mermaid').forEach(function(el){
     var id='mmd'+Math.random().toString(36).slice(2,9);

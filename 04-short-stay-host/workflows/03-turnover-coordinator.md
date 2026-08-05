@@ -20,6 +20,17 @@ flowchart LR
   C -->|No| E[Clean on schedule]
 ```
 
+## How it runs, day to day
+
+1. The AI watches every checkout time in your calendar.
+2. The cleaner gets notified the moment a room is free — no back-and-forth about timings.
+3. If the next guest checks in the same day, the AI confirms the clean is done before handing over the door code.
+4. Buffer times and cleaner preferences are set once; the AI respects them from then on.
+
+## What a reply looks like
+
+"Room ready to clean at 10am — next guest checks in at 3pm, so anytime before 2:30 works. Thanks!"
+
 ## What a human still does
 
 - Decides the buffer time between bookings

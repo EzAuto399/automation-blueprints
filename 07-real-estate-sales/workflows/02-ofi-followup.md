@@ -21,6 +21,17 @@ flowchart LR
   D -->|Not yet| F[Next open-home reminder]
 ```
 
+## How it runs, day to day
+
+1. The open home ends; the attendee list is captured.
+2. Within hours, each attendee gets a short follow-up — a line about the property and the next open time.
+3. Interested replies are sorted for private viewings; the rest get a gentle reminder.
+4. Speed is the whole game — the follow-up lands while they're still talking about the place.
+
+## What a reply looks like
+
+"Thanks for coming through on Saturday — great to meet you. This one's getting strong interest; next open is Wednesday 5pm. Want a private look before then?"
+
 ## What a human still does
 
 - Approves the follow-up lines once

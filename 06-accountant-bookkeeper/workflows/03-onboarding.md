@@ -20,6 +20,17 @@ flowchart LR
   D --> E[Onboarding complete]
 ```
 
+## How it runs, day to day
+
+1. New client signs → welcome pack goes out immediately.
+2. The engagement checklist is sent one step at a time, not as a wall of forms.
+3. Each missing signature or document gets a specific, friendly chase.
+4. When step one is done, step two arrives. Day one looks organised.
+
+## What a reply looks like
+
+"Welcome aboard! Step 1 of 4: sign the engagement letter here. The next step arrives the moment that's done."
+
 ## What a human still does
 
 - Approves the onboarding pack once

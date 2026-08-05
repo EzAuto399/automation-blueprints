@@ -20,6 +20,17 @@ flowchart LR
   D --> E[You attend the visit]
 ```
 
+## How it runs, day to day
+
+1. A seller enquiry lands on Sunday — 'could you come and value my place?'
+2. The AI replies with your process, books the appraisal into your calendar, and sends the seller a confirmation with prep notes.
+3. You just show up with the paperwork ready.
+4. Every appraisal request gets answered the same day — weekends included.
+
+## What a reply looks like
+
+"Thanks for reaching out! We'd love to come by for an appraisal — I'm free Saturday morning or Monday arvo. Which suits better?"
+
 ## What a human still does
 
 - Approves the reply and the booking window

@@ -19,6 +19,17 @@ flowchart LR
   C --> D[Thank-you reply]
 ```
 
+## How it runs, day to day
+
+1. After checkout, the AI waits a couple of hours — long enough for the goodbye, short enough to be fresh.
+2. One polite nudge with the review link. Once per stay, never more.
+3. A thank-you goes back automatically when the review lands.
+4. Bad feedback is flagged to you privately, not argued with in public.
+
+## What a reply looks like
+
+"Hope you had a lovely stay! If you've got a minute, a review helps us a lot — here's the link. You're welcome back anytime."
+
 ## What a human still does
 
 - Approves the nudge wording

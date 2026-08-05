@@ -22,6 +22,17 @@ flowchart LR
   E -->|No| G[Back on the list]
 ```
 
+## How it runs, day to day
+
+1. After every visit, the recall date is saved — six months, twelve, whatever the plan says.
+2. When patients come due, the nudge goes out: short, friendly, one clear next step.
+3. Rebooks land straight in the calendar.
+4. The list builds itself. Nobody has to remember who's due.
+
+## What a reply looks like
+
+"It's been six months since your last check-up. Feeling any niggles? We've got time next week if you'd like to come in."
+
 ## What a human still does
 
 - Decides which visit types get recall nudges

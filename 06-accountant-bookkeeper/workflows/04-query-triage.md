@@ -20,6 +20,17 @@ flowchart LR
   C -->|Yes| E[Your desk with context]
 ```
 
+## How it runs, day to day
+
+1. Client emails land at 6pm: 'do I pay GST on this?', 'send my income summary'.
+2. The AI drafts the reply from the firm's own standard answers and previous responses.
+3. You approve — or step in for anything that's actual advice.
+4. Clients get fast answers; you keep the judgement.
+
+## What a reply looks like
+
+"Good question — for businesses your size, GST applies on that sale. I've attached a one-page summary; want a quick call to walk through it?"
+
 ## What a human still does
 
 - Approves every reply before it sends

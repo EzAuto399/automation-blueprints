@@ -20,6 +20,17 @@ flowchart LR
   D --> E[Repeat customers get a service reminder]
 ```
 
+## How it runs, day to day
+
+1. Two hours after the job is marked done, the review request goes out — while the result is still fresh.
+2. One short message, one link. No follow-up nagging.
+3. If a review comes in, the AI sends a short thank-you.
+4. Customers who leave reviews go on the seasonal reminder list automatically.
+
+## What a reply looks like
+
+"Glad it's all sorted. If you've got a minute, a quick review helps small local businesses a lot — here's the link. Thanks again!"
+
 ## What a human still does
 
 - Chooses the review platform (Google, word of mouth)
