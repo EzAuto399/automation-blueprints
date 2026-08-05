@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>After-hours quote responder · Automating Real Businesses</title>
+<style>
+:root{
+  --bg:#0b0d12;--raised:#111318;--paper:#f4efe6;--ink:#111318;--muted:#5b554c;
+  --line:#d8d0c2;--coral:#f07545;--tint:#f3a884;--deep:#a64f2f;
+  --w85:rgba(255,255,255,.88);--w72:rgba(255,255,255,.72);--w55:rgba(255,255,255,.55);
+  --w40:rgba(255,255,255,.4);--w12:rgba(255,255,255,.12);--w06:rgba(255,255,255,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+.shell{max-width:1120px;margin:0 auto;padding:1.25rem 1.25rem 3rem}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1.5rem}
+.brand{font-family:ui-monospace,Menlo,monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tint)}
+.nav{display:flex;flex-wrap:wrap;gap:.25rem}
+.nav a{color:var(--w55);text-decoration:none;font-size:.8rem;font-weight:600;padding:.42rem .7rem;border-radius:999px;border:1px solid transparent}
+.nav a:hover{color:var(--tint);border-color:var(--w12)}
+.nav a.on{background:var(--coral);color:#0b0d12;border-color:var(--coral)}
+.grid{display:grid;grid-template-columns:1fr 3fr;gap:1.5rem;align-items:start}
+.side{position:sticky;top:1rem;display:flex;flex-direction:column;gap:.15rem;font-size:.86rem}
+.side a{color:var(--w55);text-decoration:none;padding:.32rem .55rem;border-radius:8px}
+.side a:hover{color:var(--tint);background:var(--w06)}
+.side a.on{color:#fff;background:rgba(240,117,69,.14);border-left:2px solid var(--coral)}
+.side .grp{font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w40);padding:.5rem .55rem .15rem}
+.content{min-width:0}
+.content h1{font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:.8rem}
+.content h2{font-size:1.25rem;margin:1.6rem 0 .6rem;color:var(--tint)}
+.content h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--w85)}
+.content p{margin:.55rem 0;color:var(--w72)}
+.content strong{color:#fff}
+.content a{color:var(--tint);text-decoration:none;border-bottom:1px solid rgba(240,117,69,.35)}
+.content a:hover{color:#fff;border-color:var(--coral)}
+.content ul,.content ol{margin:.55rem 0 .55rem 1.3rem;color:var(--w72)}
+.content li{margin:.3rem 0}
+.content blockquote{border-left:3px solid var(--coral);padding:.2rem 0 .2rem 1rem;color:var(--w55);margin:1rem 0}
+.content hr{border:0;border-top:1px solid var(--w12);margin:1.6rem 0}
+.mermaid-holder{margin:1.1rem 0;background:var(--raised);border:1px solid var(--w12);border-radius:14px;padding:.9rem;overflow:auto}
+.mermaid-holder svg{max-width:100%;height:auto}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.86em;background:var(--w06);border:1px solid var(--w12);border-radius:6px;padding:.1rem .35rem;color:var(--tint)}
+pre{background:var(--raised);border:1px solid var(--w12);border-radius:12px;padding:.9rem 1rem;overflow:auto;margin:.8rem 0}
+pre code{background:none;border:0;padding:0;color:var(--w72)}
+.foot{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--w12);font-size:.86rem;color:var(--w55)}
+.foot a{color:var(--tint)}
+.honest{border-left:4px solid var(--coral);background:rgba(240,117,69,.09);padding:.7rem .9rem;border-radius:0 10px 10px 0;margin:1.1rem 0;color:var(--w85)}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.side{position:static}}
+</style>
+</head>
+<body><div class="shell">
+<div class="bar">
+  <span class="brand">Automating Real Businesses · by Yo-Da Lai</span>
+  <div class="nav">
+    <a href="../">Home</a>
+    <a href="../pattern.html">The pattern</a>
+    <a href="https://www.youtube.com/@yodalaihq" target="_blank">YouTube</a>
+    <a href="https://yodalai.xyz" target="_blank">yodalai.xyz</a>
+  </div>
+</div>
+<div class="grid">
+  <nav class="side"><a class="grp">Series</a>
+<a href="../" class="">Home</a>
+<a href="../pattern.html" class="">The pattern</a>
+<a class="grp">03 Tradie</a>
+<a href="../03-tradie/index.html" class="">Tradie</a>
+<a href="../03-tradie/workflows/01-quote-responder.html" class="on">· After-hours quote responder</a>
+<a href="../03-tradie/workflows/02-quote-followup.html" class="">· Quote follow-up chaser</a>
+<a href="../03-tradie/workflows/03-job-booking.html" class="">· Job booking + reminders</a>
+<a href="../03-tradie/workflows/04-review-requester.html" class="">· Review requester</a>
+<a href="../03-tradie/workflows/05-service-reminder.html" class="">· Seasonal service reminders</a>
+<a class="grp">04 Short Stay Host</a>
+<a href="../04-short-stay-host/index.html" class="">Short-stay host</a>
+<a href="../04-short-stay-host/workflows/01-guest-responder.html" class="">· Guest enquiry responder</a>
+<a href="../04-short-stay-host/workflows/02-checkin-pack.html" class="">· Check-in pack sender</a>
+<a href="../04-short-stay-host/workflows/03-turnover-coordinator.html" class="">· Turnover coordinator</a>
+<a href="../04-short-stay-host/workflows/04-review-chaser.html" class="">· Review chaser</a>
+<a href="../04-short-stay-host/workflows/05-repeat-guest.html" class="">· Quiet-night + repeat-guest offer</a>
+<a class="grp">05 Allied Health Clinic</a>
+<a href="../05-allied-health-clinic/index.html" class="">Allied health clinic</a>
+<a href="../05-allied-health-clinic/workflows/01-intake-responder.html" class="">· New patient intake responder</a>
+<a href="../05-allied-health-clinic/workflows/02-reminders.html" class="">· Appointment reminders (cut no-shows)</a>
+<a href="../05-allied-health-clinic/workflows/03-recall-list.html" class="">· Recall list runner</a>
+<a href="../05-allied-health-clinic/workflows/04-afterhours-questions.html" class="">· After-hours question responder</a>
+<a href="../05-allied-health-clinic/workflows/05-careplan-followup.html" class="">· Care-plan follow-up</a>
+<a class="grp">06 Accountant Bookkeeper</a>
+<a href="../06-accountant-bookkeeper/index.html" class="">Accountant & bookkeeper</a>
+<a href="../06-accountant-bookkeeper/workflows/01-doc-chaser.html" class="">· Document request chaser</a>
+<a href="../06-accountant-bookkeeper/workflows/02-deadline-reminders.html" class="">· Deadline countdown reminders</a>
+<a href="../06-accountant-bookkeeper/workflows/03-onboarding.html" class="">· New client onboarding</a>
+<a href="../06-accountant-bookkeeper/workflows/04-query-triage.html" class="">· Query triage responder</a>
+<a href="../06-accountant-bookkeeper/workflows/05-reengagement.html" class="">· Annual re-engagement</a>
+<a class="grp">07 Real Estate Sales</a>
+<a href="../07-real-estate-sales/index.html" class="">Real estate sales agent</a>
+<a href="../07-real-estate-sales/workflows/01-appraisal-responder.html" class="">· Appraisal request responder</a>
+<a href="../07-real-estate-sales/workflows/02-ofi-followup.html" class="">· Open-home follow-up (same day)</a>
+<a href="../07-real-estate-sales/workflows/03-vendor-update.html" class="">· Vendor update loop</a>
+<a href="../07-real-estate-sales/workflows/04-buyer-match.html" class="">· Buyer enquiry matcher</a>
+<a href="../07-real-estate-sales/workflows/05-past-client-nurture.html" class="">· Past-client nurture</a></nav>
+  <main class="content"><h1>After-hours quote responder</h1>
+<h2>What it does</h2>
+<p>A customer sends a photo of the job at 8pm. The AI reads your price list and past jobs, drafts a quote reply, and sends it after you tap approve on your phone — while you're still on the couch.</p>
+<h2>The loop</h2>
+<pre><code class="language-mermaid">flowchart LR
+  A[Job enquiry with photo] --&gt; B[AI drafts reply&lt;br/&gt;from your price list]
+  B --&gt; C{You approve}
+  C --&gt;|Yes| D[Quote reply sent tonight]
+  C --&gt;|Edit| E[You adjust price]
+  E --&gt; D
+</code></pre>
+<h2>What a human still does</h2>
+<ul>
+<li>Approves the price before anything is promised</li>
+<li>Decides anything unusual (hard job, access issues)</li>
+<li>Sets the tone once — a few iterations at the start</li>
+</ul>
+<h2>What it runs on</h2>
+<p>A small always-on computer (a Mac mini is plenty) watching your SMS and Messenger. No website rebuild, no CRM migration needed.</p>
+<hr />
+<p><em>Want this for your business? Free 15-min build review: <a href="https://yodalai.xyz">yodalai.xyz</a></em></p></main>
+</div>
+<div class="foot">
+  Free workflow maps — no tech knowledge needed. Want this for your business?
+  <a href="https://yodalai.xyz">yodalai.xyz</a> · free 15-min build review.
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({startOnLoad:false,theme:'base',themeVariables:{
+  primaryColor:'#fdf3ee',primaryBorderColor:'#f07545',primaryTextColor:'#111318',
+  lineColor:'#5b554c',fontFamily:'system-ui, sans-serif',fontSize:'15px'}});
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('pre code.language-mermaid').forEach(function(el){
+    var id='mmd'+Math.random().toString(36).slice(2,9);
+    mermaid.render(id,(el.textContent||'').trim()).then(function(r){
+      var h=document.createElement('div');h.className='mermaid-holder';h.innerHTML=r.svg;
+      el.closest('pre').replaceWith(h);
+    }).catch(function(e){console.warn('mermaid fail',e);});
+  });
+});
+</script>
+</body></html>
